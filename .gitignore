@@ -5,3 +5,4 @@ logs/*
 # Uncomment after cloning
 # .eslintrc
 # .env
+public/*/*
