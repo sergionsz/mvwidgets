@@ -1,0 +1,19 @@
+{
+  // Use AirBnB rules
+  "extends": "airbnb",
+  "rules": {
+    // Allow capitals for function names that are not constructors
+    "new-cap": [
+        1, {
+        "newIsCap": true,
+        "properties": false
+      }
+      ],
+    // Allow assignment in while blocks
+    "no-cond-assign": [2, "except-parens"],
+    // Allow long URLs
+    "max-len": ["error", {
+      "ignoreUrls": true
+    }]
+  }
+}
