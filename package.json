@@ -18,9 +18,9 @@
     "url": "https://github.com/sergionsz/expresstemplate"
   },
   "keywords": [
-    "gallery",
-    "test",
-    "razorfish"
+    "all",
+    "your",
+    "keywords"
   ],
   "author": "Sergio NS",
   "license": "GPL-3.0",
@@ -40,9 +40,10 @@
     "uglify-js": "~2.6.2"
   },
   "dependencies": {
-    "express": "~4.13.4",
     "debug": "~2.2.0",
+    "dotenv": "~2.0.0",
+    "express": "~4.13.4",
     "jade": "~1.11.0",
-    "dotenv": "~2.0.0"
+    "winston": "^2.2.0"
   }
 }
