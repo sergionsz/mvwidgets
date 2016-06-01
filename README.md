@@ -14,6 +14,7 @@ As soon as you clone, make sure you perform the following actions:
   2. Change your repository and bugs URLs
   3. Add some keywords
 2. Uncomment the lines ".eslintrc" and ".env" in .gitignore
+  1. _Optional_: Remove .gitignore files in logs public/css public/js and public/img
 3. Change the title in routes/index.js
 4. Run
 ``` bash
