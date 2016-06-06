@@ -6,6 +6,7 @@ Express template for new projects. This template uses:
 - [imagemin](https://github.com/imagemin/imagemin, imagemin)
 - [tape](https://github.com/substack/tape, "tape")
 - [winston](https://github.com/winstonjs/winston, "winston")
+- [babel](https://github.com/babel/babel/, "babel")
 
 As soon as you clone, make sure you perform the following actions:
 
@@ -22,5 +23,6 @@ npm install
 ```
 5. Change de favicon files in src/img/favicon
 6. Erase example test from tests
+7. Modify this README
 
 Now you're ready to go.

@@ -1,0 +1,1 @@
+cualquierCosa => console.log(cualquierCosa);
