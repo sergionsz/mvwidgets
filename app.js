@@ -3,6 +3,7 @@ const path = require('path');
 const winston = require('winston');
 
 const index = require('./routes/index');
+const menuData = require('./routes/getdata');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/getdata', menuData);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

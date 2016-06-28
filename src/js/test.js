@@ -1,1 +1,0 @@
-cualquierCosa => console.log(cualquierCosa);

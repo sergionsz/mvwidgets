@@ -1,0 +1,31 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+$colors: (
+  blue: #587FAA,
+  orange: #EB5922,
+  green: #21B672,
+  yellow: #E2D345,
+  red: #E84E16
+);
+
+.col-center{
+    float: none;
+    margin: 0 auto;
+}
+
+body {
+  @extend .text-center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@each $color, $colorValue in $colors {
+  .btn-#{$color}{
+    color: #fff;
+    background-color: #{$colorValue};
+  }
+}
+
+.btn-primary {
+  @extend .btn-blue;
+}

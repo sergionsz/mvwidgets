@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "text": "Check in",
+    "icon": "map-marker"
+  },
+  {
+    "id": 2,
+    "text": "Events",
+    "icon": "heart"
+  },
+  {
+    "id": 3,
+    "text": "Account",
+    "icon": "user"
+  },
+  {
+    "id": 4,
+    "text": "Settings",
+    "icon": "cog"
+  }
+]
