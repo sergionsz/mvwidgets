@@ -6,3 +6,5 @@ logs/*
 # .eslintrc
 # .env
 public/
+.directory
+tmp*/

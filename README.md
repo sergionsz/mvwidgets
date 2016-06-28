@@ -20,8 +20,9 @@ As soon as you clone, make sure you perform the following actions:
 ``` bash
 npm install
 ```
-5. Change de favicon files in src/img/favicon
+5. Change the favicon files in src/img/favicon
 6. Erase example test from tests
 7. Modify this README
+8. Change the remote URL for the repo
 
 Now you're ready to go.

@@ -3,20 +3,30 @@
   "version": "0.0.0",
   "description": "A description for the project",
   "main": "app.js",
+  "engines": {
+    "node": "6.2.0",
+    "npm": "3.8.9"
+  },
   "scripts": {
     "prescss": "mkdirp public/css",
     "scss": "node-sass --output-style compressed -o public/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r public/css/*",
     "build:css": "npm run scss && npm run autoprefixer",
-    "prebabel": "mkdirp public/js",
-    "babel": "babel src/js --out-dir public/js",
-    "uglify": "uglifyjs tmp/js/*.js -m -c -o public/js/app.js",
-    "build:js": "npm run babel",
+    "prebabel": "mkdirp public/js; mkdirp tmpjs",
+    "babel": "babel src/js --out-dir tmpjs",
+    "uglify": "uglifyjs tmpjs/*.js -m -c -o public/js/app.js",
+    "build:js": "npm run babel && npm run uglify",
     "preimagemin": "mkdirp public/img",
-    "imagemin": "imagemin src/img public/img -p",
-    "build": "npm run build:css && npm run build:js && npm run imagemin",
+    "imagemin": "imagemin src/img/* --out-dir=public/img",
+    "prefonts": "mkdirp public/fonts/",
+    "fonts": "cp src/fonts/* public/fonts/",
+    "build": "npm run build:css && npm run build:js && npm run imagemin && npm run fonts",
     "test": "tape tests/*.js",
-    "start": "mkdirp logs && node ./bin/www.js"
+    "start": "mkdirp logs && node ./bin/www.js",
+    "rebuild": "npm run build && npm start",
+    "rebuild:js": "npm run build:js && npm start",
+    "rebuild:css": "npm run build:css && npm start",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,27 +43,26 @@
     "url": "https://github.com/sergionsz/expresstemplate/issues"
   },
   "devDependencies": {
-    "autoprefixer": "~6.3.6",
-    "babel-cli": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "eslint": "^2.11.1",
+    "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.8.1",
-    "eslint-plugin-jsx-a11y": "^1.2.2",
-    "eslint-plugin-react": "^5.1.1",
-    "imagemin-cli": "~2.1.0",
-    "mkdirp": "^0.5.1",
-    "node-sass": "~3.7.0",
-    "postcss-cli": "~2.5.2",
-    "rimraf": "^2.5.2",
-    "tape": "^4.5.1",
-    "uglify-js": "~2.6.2"
+    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-react": "^5.2.2"
   },
   "dependencies": {
-    "debug": "~2.2.0",
-    "dotenv": "~2.0.0",
-    "express": "~4.13.4",
-    "jade": "~1.11.0",
-    "winston": "^2.2.0"
+    "autoprefixer": "6.3.6",
+    "babel-cli": "6.10.1",
+    "babel-preset-es2015": "6.9.0",
+    "debug": "2.2.0",
+    "dotenv": "2.0.0",
+    "express": "4.14.0",
+    "imagemin-cli": "3.0.0",
+    "mkdirp": "0.5.1",
+    "node-sass": "3.8.0",
+    "postcss-cli": "2.5.2",
+    "pug": "2.0.0-beta3",
+    "tape": "4.6.0",
+    "uglify-js": "2.6.4",
+    "winston": "2.2.0"
   }
 }
