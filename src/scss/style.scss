@@ -14,11 +14,6 @@ $colors: (
   beige: #CC9576
 );
 
-.col-center{
-    float: none;
-    margin: 0 auto;
-}
-
 .opensans {
   font-family: 'Open Sans', sans-serif;
 }
@@ -27,6 +22,10 @@ body {
   @extend .text-center;
   @extend .opensans;
   background-color: map-get($colors, red);
+}
+
+h1 {
+  color: #FFF;
 }
 
 span, h1 {
@@ -56,6 +55,7 @@ span, h1 {
 
 /* Customize profile */
 .profile__menu li:hover {
+  border-left-color: map-get($colors, green);
   span {
     color: map-get($colors, red);
   }

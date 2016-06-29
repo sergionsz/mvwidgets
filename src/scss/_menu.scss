@@ -91,7 +91,7 @@ $activeColor: #F8F3F0;
   .menu__entry:first-child {
     border-radius: 4px 0 0 4px;
   }
-  .menu__entry:last-child {
+  .menu__entry:nth-last-child(2) {
     border-radius: 0 4px 4px 0;
   }
   .menu__show-all {
