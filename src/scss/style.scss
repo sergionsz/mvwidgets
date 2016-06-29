@@ -3,6 +3,7 @@ $icon-font-path: '../fonts/bootstrap/';
 @import 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
 @import 'menu';
+@import 'profile';
 
 $colors: (
   blue: #587FAA,
@@ -18,10 +19,18 @@ $colors: (
     margin: 0 auto;
 }
 
+.opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   @extend .text-center;
-  font-family: 'Open Sans', sans-serif;
+  @extend .opensans;
   background-color: map-get($colors, red);
+}
+
+span, h1 {
+  @extend .opensans;
 }
 
 @each $color, $colorValue in $colors {
@@ -43,4 +52,11 @@ body {
 }
 .menu__entry--active, .menu__entry--active:hover, .menu__entry--active:focus {
   border-bottom-color: map-get($colors, green);
+}
+
+/* Customize profile */
+.profile__menu li:hover {
+  span {
+    color: map-get($colors, red);
+  }
 }

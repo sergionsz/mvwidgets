@@ -1,0 +1,62 @@
+$gray: #A99F8F;
+$darkgray: #6F6658;
+
+.profile {
+  float: left;
+  text-align: left;
+  color: $gray;
+}
+
+.profile__head {
+  background-color: $gray;
+  padding: 7% 6%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.profile__photo {
+  display:inline-block;
+  width: 35%;
+  margin-right: 10%;
+  box-shadow: 0 0 20px -2px red;
+}
+
+.profile__info {
+  width: 35%;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.profile__name {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 160%;
+  display: block;
+  line-height: 95%;
+  margin: 7%;
+}
+
+.profile__followerCount {
+  color: $darkgray;
+  display: block;
+  font-weight: bold;
+}
+
+.profile__menu {
+  width: 90%;
+  margin: auto;
+}
+
+.profile__menu li span {
+  float: right;
+}
+.profile__menu li:first-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.profile__menu li:hover {
+  background-color: #F7F2EE;
+  span {
+    color: red;
+  }
+}

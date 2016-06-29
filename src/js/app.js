@@ -10,8 +10,9 @@ function getAndRun(url, callback) {
   xhr.send();
 }
 
-function runMenu(data) {
-  window.menu.run('menu', data);
+function runWidget(widget) {
+  return data => window[widget].run(widget, data);
 }
 
-getAndRun('/getdata/menu', runMenu);
+getAndRun('/getdata/menu', runWidget('menu'));
+getAndRun('/getdata/profile', runWidget('profile'));
