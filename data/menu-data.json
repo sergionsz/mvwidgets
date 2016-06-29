@@ -2,7 +2,8 @@
   {
     "id": 1,
     "text": "Check in",
-    "icon": "map-marker"
+    "icon": "map-marker",
+    "counter": 3
   },
   {
     "id": 2,

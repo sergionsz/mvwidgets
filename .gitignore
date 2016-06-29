@@ -2,8 +2,7 @@ node_modules
 .npm
 *.log
 logs/*
-# Uncomment after cloning
-#.eslintrc
+.eslintrc
 .env
 public/
 .directory

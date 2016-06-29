@@ -1,12 +1,16 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+$icon-font-path: '../fonts/bootstrap/';
 @import 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+@import 'menu';
 
 $colors: (
   blue: #587FAA,
   orange: #EB5922,
   green: #21B672,
   yellow: #E2D345,
-  red: #E84E16
+  red: #E84E16,
+  beige: #CC9576
 );
 
 .col-center{
@@ -17,6 +21,7 @@ $colors: (
 body {
   @extend .text-center;
   font-family: 'Open Sans', sans-serif;
+  background-color: map-get($colors, red);
 }
 
 @each $color, $colorValue in $colors {
@@ -28,4 +33,14 @@ body {
 
 .btn-primary {
   @extend .btn-blue;
+}
+
+/* Customize menu */
+.menu__entry, .menu__show-all {
+  .counter {
+    background-color: map-get($colors, red);
+  }
+}
+.menu__entry--active, .menu__entry--active:hover, .menu__entry--active:focus {
+  border-bottom-color: map-get($colors, green);
 }
