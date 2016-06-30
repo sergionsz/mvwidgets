@@ -66,7 +66,7 @@ window.profile = (function profile() {
     );
     const followerNumber = helper.createDOMElement('span', [], {}, '0');
     const followerCount = helper.createDOMElement('span',
-    ['profile__followerCount'], {}, ' followers'
+      ['profile__followerCount'], {}, ' followers'
     );
     followerCount.insertBefore(followerNumber, followerCount.firstChild);
     // Create menu
