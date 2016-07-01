@@ -10,9 +10,9 @@ Notes:
   - Data is an array of objects in the following format:
     {
       "id": <int Identifier>,
-      "name": "<string User name>",
+      "name": <string User name>,
       "followersCount": <int Number of followers>,
-      "photo": "<string Filename of the photo>"
+      "photo": <string Filename of the photo>
     }
   - The following options may be used:
     {

@@ -14,5 +14,8 @@ function runWidget(widget) {
   return data => window[widget].run(widget, data);
 }
 
-getAndRun('/getdata/menu', runWidget('menu'));
-getAndRun('/getdata/profile', runWidget('profile'));
+['menu', 'profile', 'blogpost'].forEach(widget =>
+  getAndRun(`/getdata/${widget}`, runWidget(widget))
+);
+
+window.form.run('form');

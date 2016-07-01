@@ -21,7 +21,7 @@
     "prebs-fonts": "rimraf public/fonts/bootstrap && mkdirp public/fonts/bootstrap",
     "bs-fonts": "cpr node_modules/bootstrap-sass/assets/fonts/bootstrap public/fonts/bootstrap",
     "fonts": "cp src/fonts/* public/fonts/ && npm run bs-fonts",
-    "build": "npm run build:css & npm run build:js & npm run imagemin & npm run fonts",
+    "build": "npm run build:css && npm run build:js && npm run imagemin && npm run fonts",
     "test": "tape tests/*.js",
     "start": "mkdirp logs && node ./bin/www.js",
     "rebuild": "npm run build && npm start",

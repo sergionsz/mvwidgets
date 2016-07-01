@@ -1,33 +1,33 @@
-$profile-head-color: #A99F8F;
+$blogpost-head-color: #A99F8F;
 $follower-count-color: #6F6658;
 
-.profile {
+.blogpost {
   float: left;
   text-align: left;
-  color: $profile-head-color;
+  color: $blogpost-head-color;
   width: 100%;
 }
 
-.profile__head {
+.blogpost__head {
   padding: 3% 10%;
   text-align: left;
-  background-color: $profile-head-color;
+  background-color: $blogpost-head-color;
 }
 
-.profile__photo {
+.blogpost__photo {
   display:inline-block;
   width: 30%;
   margin-right: 10%;
   box-shadow: 0 0 20px -2px red;
 }
 
-.profile__info {
+.blogpost__info {
   width: 35%;
   display:inline-block;
   vertical-align: middle;
 }
 
-.profile__name {
+.blogpost__name {
   color: #FFF;
   font-weight: bold;
   font-size: 160%;
@@ -36,13 +36,13 @@ $follower-count-color: #6F6658;
   margin: 7% 0;
 }
 
-.profile__followerCount {
+.blogpost__followerCount {
   color: $follower-count-color;
   display: block;
   font-weight: bold;
 }
 
-.profile__menu {
+.blogpost__menu {
   width: 100%;
   margin: auto;
   li {
@@ -65,19 +65,19 @@ $follower-count-color: #6F6658;
 }
 
 @media only screen and (min-width: 769px) {
-  .profile {
+  .blogpost {
     width: 440px;
     height: auto;
   }
-  .profile__head {
+  .blogpost__head {
     padding: 7% 6%;
     text-align: center;
     border-radius: 5px;
   }
-  .profile__photo {
+  .blogpost__photo {
     width: 35%;
   }
-  .profile__menu {
+  .blogpost__menu {
     width: 90%;
   }
 }

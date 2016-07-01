@@ -1,0 +1,155 @@
+$submit-area-color: #F5EFE9;
+$submit-button-color: #EB5922;
+$text-color: #847966;
+$placeholder-color: #BDB6A9;
+$send-button-color: #E76740;
+$send-icon-color: #EC3D2A;
+$contacts-button-color: #5E91B0;
+
+.form {
+  float: left;
+  width: 100%;
+  text-align: left;
+  color: $text-color;
+  .btn {
+    border-radius: 6px;
+    font-size: 140%;
+    color: #FFF;
+  }
+}
+
+.form__fields {
+  background-color: #FFF;
+  padding: 5% 3%;
+  width: 100%;
+  label {
+    font-size: 140%;
+    font-weight: normal;
+    margin: 2% 0;
+  }
+  input, textarea {
+    border-width: 0;
+    box-shadow: none;
+    font-size: 115%;
+  }
+  ::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.form__contacts-group {
+  float: left;
+  width: 100%;
+  label {
+    display: block;
+  }
+  .contacts-area {
+    display: block;
+    float: left;
+    min-height: 1px;
+    width: 80%;
+    transition-property: width;
+    transition-duration: 1000ms;
+  }
+  .contacts-area.write-contact {
+    width: 0%;
+    transition-property: width;
+    transition-duration: 1000ms;
+  }
+  .contacts-area.write-contact .btn {
+    display: none;
+    background-color: $contacts-button-color;
+    margin-right: 5px;
+  }
+  .add-contacts-button {
+    display: block;
+    float: left;
+  }
+  .contacts-input {
+    width: 0;
+    float: left;
+    display: block;
+    padding: 0;
+    transition-property: width, padding;
+    transition-duration: 1000ms;
+  }
+  .contacts-input.write-contact {
+    width: 80%;
+    padding: 1% 4%;
+    transition-property: width, padding;
+    transition-duration: 1000ms;
+  }
+}
+
+
+.form__submit-area {
+  background-color: $submit-area-color;
+  float: left;
+  width: 100%;
+  padding: 4% 3%;
+  position: relative;
+  top: -2px;
+  .checkbox {
+    float: left;
+    label {
+      max-width: none;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    input[type="checkbox"] + span {
+      width: 20px;
+      height: 20px;
+      background-color: #FFF;
+      color: green;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 80%;
+    }
+    input[type="checkbox"] + span:before {
+      vertical-align: middle;
+    }
+    input[type="checkbox"]:not(:checked) + span::before {
+      content: none;
+    }
+    span:last-child {
+      font-size: 140%;
+      vertical-align: middle;
+      margin-left: 7%;
+    }
+  }
+  .send-button {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: #FFF;
+    background-color: $send-button-color;
+    padding: 2% 4% 2% 3%;
+    span.glyphicon {
+      border-radius: 50%;
+      background-color: $send-icon-color;
+      text-align: center;
+      vertical-align: middle;
+      height: 25px;
+      width: 25px;
+      font-size: 50%;
+      line-height: 25px;
+    }
+    span:last-child {
+      margin-left: 10%;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .form {
+    width: 440px;
+    height: auto;
+  }
+  .form__fields {
+    border-radius: 6px 6px 0 0;
+    width: 95%;
+    margin: auto;
+  }
+}
