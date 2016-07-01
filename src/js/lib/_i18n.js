@@ -1,8 +1,9 @@
 const helper = window.widgetsHelper;
 
 window.lang = (function lang() {
-  this.data = {};
-  this.current = '';
+  const exports = {};
+  exports.data = {};
+  exports.current = '';
 
   function changeLang() {
     Array.prototype.forEach.call(document.querySelectorAll('.i18n'),

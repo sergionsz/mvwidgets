@@ -13,7 +13,7 @@
     "autoprefixer": "postcss -u autoprefixer -r public/css/*",
     "build:css": "npm run scss && npm run autoprefixer",
     "prebabel": "mkdirp public/js",
-    "babel": "babel src/js --out-file public/js/app.js",
+    "babel": "babel src/js/lib --out-file public/js/lib.js && babel src/js/app.js --out-file public/js/app.js",
     "build:js": "npm run babel",
     "preimagemin": "mkdirp public/img",
     "imagemin": "imagemin src/img/* --out-dir=public/img",
