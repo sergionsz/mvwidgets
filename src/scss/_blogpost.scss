@@ -1,83 +1,77 @@
-$blogpost-head-color: #A99F8F;
-$follower-count-color: #6F6658;
+$stats-background: #F5EFE9;
+$text-color: #534B3E;
+$likes-color: #EB6738;
 
 .blogpost {
   float: left;
-  text-align: left;
-  color: $blogpost-head-color;
+  width: 100%;
+  color: $text-color;
+}
+.blogpost__post-photo {
   width: 100%;
 }
-
-.blogpost__head {
-  padding: 3% 10%;
+.blogpost__info {
+  background-color: #FFF;
+  padding: 5% 11% 13%;
   text-align: left;
-  background-color: $blogpost-head-color;
 }
-
-.blogpost__photo {
-  display:inline-block;
-  width: 30%;
-  margin-right: 10%;
+.blogpost__author-photo {
+  display: inline-block;
+  width: 25%;
+  margin-right: 9%;
   box-shadow: 0 0 20px -2px red;
 }
-
-.blogpost__info {
-  width: 35%;
-  display:inline-block;
+.blogpost__author-info {
+  width: 60%;
+  display: inline-block;
   vertical-align: middle;
 }
-
-.blogpost__name {
-  color: #FFF;
-  font-weight: bold;
-  font-size: 160%;
-  display: block;
-  line-height: 95%;
-  margin: 7% 0;
-}
-
-.blogpost__followerCount {
-  color: $follower-count-color;
-  display: block;
+.blogpost__author-name {
+  font-size: 200%;
   font-weight: bold;
 }
-
-.blogpost__menu {
-  width: 100%;
-  margin: auto;
-  li {
-    border-left-width: 6px;
-    border-left-color: #FFF;
-    span {
-      float: right;
-    }
-  }
-  li:first-child {
-    border-radius: 0;
-  }
-  li:hover {
-    background-color: #F7F2EE;
-    border-left-color: green;
-    span {
-      color: red;
-    }
-  }
+.blogpost__text {
+  margin-top: 5%;
 }
+.blogpost__stats {
+  font-size: 150%;
+  font-weight: bold;
+  position: relative;
+  color: #AA9E92;
+}
+.blogpost__counter {
+  background-color: $stats-background;
+  width: 32.5%;
+  position: absolute;
+  padding: 4%;
+  top: -60px;
+}
+/* Distribute evenly */
+.blogpost__counter:first-child {
+  left: 0;
+}
+.blogpost__counter:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.blogpost__counter:last-child {
+  right: 0;
+  color: $likes-color;
+}
+
+.blogpost__counter span:first-child {
+  margin-right: 5%;
+}
+
 
 @media only screen and (min-width: 769px) {
   .blogpost {
     width: 440px;
     height: auto;
   }
-  .blogpost__head {
-    padding: 7% 6%;
-    text-align: center;
-    border-radius: 5px;
+  .blogpost__stats, .blogpost__info {
+    width: 95%;
+    margin: auto;
   }
-  .blogpost__photo {
-    width: 35%;
-  }
-  .blogpost__menu {
-    width: 90%;
-  }
+
 }

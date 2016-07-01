@@ -47,16 +47,20 @@ window.blogpost = (function blogpost() {
 
     // Create head
     const postPhoto = helper.createDOMElement('img', ['blogpost__post-photo'],
-      { src: `${opts.photoURL}/${data.author.photo}` }
+      { src: `${opts.postsPhotoURL}/${data.photo}` }
     );
 
-    const postInfo = helper.createDOMElement('div', ['post__info']);
+    const postInfo = helper.createDOMElement('div', ['blogpost__info']);
     const authorPhoto = helper.createDOMElement('img',
       ['blogpost__author-photo'],
-      { src: `${opts.photoURL}/${data.photo}` }
+      { src: `${opts.authorPhotoURL}/${data.author.photo}` }
     );
-    const authorName = helper.createDOMElement('span', ['author__name'],
-      {}, data.author.name.toUpperCase()
+    const authorInfo = helper.createDOMElement('div',
+      ['blogpost__author-info']
+    );
+    const authorName = helper.createDOMElement('span',
+      ['blogpost__author-name'],
+      {}, data.author.name
     );
     const postText = helper.createDOMElement('p', ['blogpost__text'],
       {}, data.text
@@ -86,13 +90,16 @@ window.blogpost = (function blogpost() {
     const likesNumber = helper.createDOMElement('span', [], {}, '0');
     helper.appendAll(likes, likesIcon, likesNumber);
 
-    helper.appendAll(postInfo, authorPhoto, authorName, postText);
+    helper.appendAll(authorInfo, authorName, postText);
+    helper.appendAll(postInfo, authorPhoto, authorInfo);
     helper.appendAll(stats, views, comments, likes);
     helper.appendAll(rootNode, postPhoto, postInfo, stats);
 
     ['views', 'comments', 'likes'].forEach((val, idx) => {
-      helper.countToValue(`blogpost__counter:nth-child(${idx + 1}) span`,
-      data[val], 3);
+      helper.countToValue(
+        `.blogpost__counter:nth-child(${idx + 1}) span:last-child`,
+        data[val], 3
+      );
     });
   };
 
